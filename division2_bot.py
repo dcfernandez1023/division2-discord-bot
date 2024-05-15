@@ -3,6 +3,8 @@ from discord import Intents
 
 from vendor import track_item, untrack_item, get_tracking
 
+import os
+
 
 bot = commands.Bot(command_prefix="/")
 
@@ -47,4 +49,4 @@ async def tracking(ctx):
         await ctx.followup.send("❌ Failed to get list of tracked items. Please try again.")
     
 
-bot.run("MTIyMjA2OTcwNzMzMTM0MjM0Nw.GRBbpd.GJ2zJaGPoqs3M3HAydKqdDeLdQw_IOmlMOXXIY")
+bot.run(os.environ.get("DISCORD_BOT_API_TOKEN"))
