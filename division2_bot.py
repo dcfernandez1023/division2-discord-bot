@@ -46,7 +46,6 @@ async def tracking(ctx):
         await ctx.followup.send(tracking)
     except Exception as e:
         print(e)
-        await ctx.followup.send("❌ Failed to get list of tracked items. Please try again.")
-    
+        await ctx.followup.send("❌ Failed to get list of tracked items. Please try again.") 
 
 bot.run(os.environ.get("DISCORD_BOT_API_TOKEN"))
