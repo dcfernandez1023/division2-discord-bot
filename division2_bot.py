@@ -48,4 +48,5 @@ async def tracking(ctx):
         print(e)
         await ctx.followup.send("❌ Failed to get list of tracked items. Please try again.") 
 
+
 bot.run(os.environ.get("DISCORD_BOT_API_TOKEN"))
